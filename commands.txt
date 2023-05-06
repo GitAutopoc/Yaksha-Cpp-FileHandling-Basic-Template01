@@ -1,2 +1,17 @@
+https://adamtheautomator.com/install-google-chrome-for-ubuntu/
+sudo apt update -y
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
+google-chrome
+
+
+https://zoomadmin.com/HowToInstall/UbuntuPackage/libcurlpp-dev
+sudo apt-get install -y libcurlpp-dev
+
+
+https://www.eriksmistad.no/getting-started-with-google-test-on-ubuntu/
+sudo apt-get install libgtest-dev
+
+
 g++ -std=c++11 -I/usr/local/include main.cpp -L/usr/local/lib -lgtest -lpthread -lcurlpp -lcurl -o main
 ./main
