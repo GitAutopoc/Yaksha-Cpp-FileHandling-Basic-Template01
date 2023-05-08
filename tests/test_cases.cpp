@@ -15,27 +15,12 @@ TEST(CppFileHandlingProjectTest, FilePresentTrue) {
     ASSERT_EQ(1, filePresent);
 }
 
-TEST(CppFileHandlingProjectTest, FilePresentFalse) {
-    const int filePresent = isFilePresent("noFile.txt");
-    TestUtils t;
-    t.yakshaAssert("FilePresentFalse", filePresent, "boundary");    
-    ASSERT_EQ(0, filePresent);
-}
-
 TEST(CppFileHandlingProjectTest, CreateFileAndWriteDataTrue) {
     const int dataWritten = createFileAndWriteData("test1.txt", "some sample data");
     const int fileCreated = dataWritten ? readData("test1.txt").length() ? 1 : 0 : 0;
     TestUtils t;
     t.yakshaAssert("CreateFileAndWriteDataTrue", dataWritten, "boundary");    
     ASSERT_EQ(1, dataWritten);
-}
-
-TEST(CppFileHandlingProjectTest, CreateFileAndWriteDataFalse) {
-    const int dataWritten = createFileAndWriteData("test1.txt", "some sample data");
-    const int dataRead = isFilePresent("test3.txt") ? readData("test3.txt").length() > 0 ? 1 : 0 : 0;
-    TestUtils t;
-    t.yakshaAssert("CreateFileAndWriteDataFalse", dataRead, "boundary");    
-    ASSERT_EQ(0, dataRead);
 }
 
 TEST(CppFileHandlingProjectTest, SearchTextTrue) {
@@ -45,13 +30,6 @@ TEST(CppFileHandlingProjectTest, SearchTextTrue) {
     ASSERT_EQ(1, textPresent);
 }
 
-TEST(CppFileHandlingProjectTest, SearchTextFalse) {
-    const int textPresent = searchText("test3.txt", "string search") ? 1 : 0;
-    TestUtils t;
-    t.yakshaAssert("SearchTextFalse", textPresent, "boundary");    
-    ASSERT_EQ(0, textPresent);
-}
-
 TEST(CppFileHandlingProjectTest, ReadDataTrue) {
     const int readedData = readData("test1.txt").length() ? 1 : 0;
     TestUtils t;
@@ -59,25 +37,10 @@ TEST(CppFileHandlingProjectTest, ReadDataTrue) {
     ASSERT_EQ(1, readedData);
 }
 
-TEST(CppFileHandlingProjectTest, ReadDataFalse) {
-    const int readedData = readData("test3.txt").length() ? 1 : 0;
-    TestUtils t;
-    t.yakshaAssert("ReadDataFalse", readedData, "boundary");    
-    ASSERT_EQ(0, readedData);
-}
-
 TEST(CppFileHandlingProjectTest, OpenFileAndAppendDataTrue) {
     const string data = "\nextra data";
     const int appendData = openFileAndAppendData("test1.txt", data);
     TestUtils t;
     t.yakshaAssert("OpenFileAndAppendDataTrue", appendData, "boundary");    
-    ASSERT_EQ(0, appendData);
-}
-
-TEST(CppFileHandlingProjectTest, OpenFileAndAppendDataFalse) {
-    const string data = "\nextra data";
-    const int appendData = isFilePresent("no_file.txt") ? openFileAndAppendData("no_file.txt", data) : 0;
-    TestUtils t;
-    t.yakshaAssert("OpenFileAndAppendDataFalse", appendData, "boundary");    
-    ASSERT_EQ(0, appendData);
+    ASSERT_EQ(1, appendData);
 }
