@@ -1,0 +1,41 @@
+https://www.eriksmistad.no/getting-started-with-google-test-on-ubuntu/
+
+https://zoomadmin.com/HowToInstall/UbuntuPackage/libcurlpp-dev
+
+https://ubuntuforums.org/showthread.php?t=2316466
+
+https://github.com/datacratic/curlpp/blob/master/examples/example00.cpp
+
+https://cplusplus.com/forum/unices/14995/
+
+https://stackoverflow.com/questions/43541759/how-to-add-library-curlpp-to-c-project
+
+https://www.cyberciti.biz/faq/how-to-install-curl-command-on-a-ubuntu-linux/
+
+g++ -std=c++11 -I/usr/local/include main.cpp -L/usr/local/lib -lgtest -lpthread -lcurlpp -lcurl -o main
+./main
+
+cmake CMakeLists.txt
+make
+./runTests
+
+https://adamtheautomator.com/install-google-chrome-for-ubuntu/
+sudo apt update -y
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
+google-chrome
+
+https://zoomadmin.com/HowToInstall/UbuntuPackage/libcurlpp-dev
+sudo apt-get install -y libcurlpp-dev
+
+https://www.eriksmistad.no/getting-started-with-google-test-on-ubuntu/
+sudo apt-get install libgtest-dev
+
+https://kezunlin.me/post/f3c3eb8/
+
+https://ubuntu.pkgs.org/20.04/ubuntu-universe-amd64/nlohmann-json3-dev_3.7.3-1_all.deb.html
+
+g++ -std=c++11 -I/usr/local/include main.cpp -L/usr/local/lib -lgtest -lpthread -lcurlpp -lcurl -o main
+./main
+
+
