@@ -36,7 +36,7 @@ class TestUtils {
 			return line;
 		}
 
-		void yakshaAssert(string testName, bool result, string testType) {
+		void yakshaAssert(string testName, int result, string testType) {
 			TestResults testResults;
 			map<std::string, TestCaseResult> testCaseResults;
 			customData = readCustomFileData("../custom.ih");
