@@ -27,7 +27,6 @@ class TestUtils {
 			string name;
 			try {
 				while (inputFile >> name) {
-					cout<<name;
 					line += name;
 				}
 			} catch(...) {
@@ -61,7 +60,7 @@ class TestUtils {
 			request.setOpt(new curlpp::options::HttpHeader(header));			
 			std::string query = finalResult;
 			request.setOpt(new curlpp::options::PostFields(query)); 
-			request.setOpt(new curlpp::options::WriteStream(&std::cout));
+			// request.setOpt(new curlpp::options::WriteStream(&std::cout));
 			request.perform();
 		}
 
