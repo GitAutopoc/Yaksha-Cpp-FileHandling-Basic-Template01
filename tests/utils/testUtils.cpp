@@ -18,7 +18,7 @@ class TestUtils {
 	public:
         string testResult;
         const string URL = "https://yaksha-stage-sbfn.azurewebsites.net/api/TestCaseResultsEnqueue?code=AjU0mofZlYs9oYbZnJpVwJWRY1dRKkDyS3QDY8aJAvrcjJvgBAXVDg==";
-        const string GUID = "f1ab8032-3cdf-4faf-a4aa-008946815a38";
+        const string GUID = "778711fe-6b20-4f29-b4f2-3452dd8dc207";
         string customData;
 	
 		string readCustomFileData(string filePath) {
