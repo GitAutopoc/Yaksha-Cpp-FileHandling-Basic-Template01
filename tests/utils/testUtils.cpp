@@ -17,7 +17,7 @@ class TestUtils {
 
 	public:
         string testResult;
-        const string URL = "https://yaksha-stage-sbfn.azurewebsites.net/api/TestCaseResultsEnqueue?code=AjU0mofZlYs9oYbZnJpVwJWRY1dRKkDyS3QDY8aJAvrcjJvgBAXVDg==";
+        const string URL = "https://yaksha-stage-sbfn-new.azurewebsites.net/api/YakshaMFAEnqueue?code=rL3UghShhlyT9EoIb0odHWH8vkkNWVuql4fyuUmE-L4xAzFuAaboEg==";
         const string GUID = "778711fe-6b20-4f29-b4f2-3452dd8dc207";
         string customData;
 	
@@ -52,7 +52,7 @@ class TestUtils {
 			string finalResult = testResultsAsJsonString(testResults);
 			curlpp::Cleanup cleanup;
 			curlpp::Easy request;
-			request.setOpt(curlpp::options::Url(std::string("https://yaksha-prod-sbfn.azurewebsites.net/api/YakshaMFAEnqueue?code=jSTWTxtQ8kZgQ5FC0oLgoSgZG7UoU9Asnmxgp6hLLvYId/GW9ccoLw==")));
+			request.setOpt(curlpp::options::Url(std::string("https://yaksha-stage-sbfn-new.azurewebsites.net/api/YakshaMFAEnqueue?code=rL3UghShhlyT9EoIb0odHWH8vkkNWVuql4fyuUmE-L4xAzFuAaboEg==")));
 			std::list<std::string> header = {
 				"Content-Type: application/json",
 				"accept: application/json"
